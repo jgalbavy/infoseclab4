@@ -1,0 +1,61 @@
+<html>
+
+ <head>
+   <h2>This is an innocent web page that lets a user set a cookie for the session and also to view the cookie
+  </h2>
+  <hr/>
+ </head>
+
+ <script type="text/javascript" language="JavaScript">
+ <!--
+  function setCookie()
+  {
+    //document.cookie = document.cookieform.username.value;
+    document.cookie = "username=" + document.cookieform.username.value; 
+    document.cookie = "password=" + document.cookieform.passwd.value; 
+  }
+
+  function showCookie()
+  {
+       alert("Cookie -- " + document.cookie);
+  }
+  function submitName()
+  {
+     document.write("Your name is " + document.cookieform.username.value);
+  }
+ //-->
+ </script>
+ 
+  <body> 
+
+   <form action="process.php" name="cookieform" method="GET">
+   
+   <script type="text/javascript" language="JavaScript">
+   <!--
+     document.write('Welcome back ' + document.cookie);
+   //-->
+   </script>
+
+    <p>
+    <input type="text" name="username" size="60" value="Enter your real name so that TA can know who the submission belongs to";>
+    </p>
+
+    <p>
+    <input type="passwd" name="passwd" size="60" value="Enter a fake password, not your real password!";>
+    </p>
+
+
+    <p>
+    <input type="button" value="Set cookie" onClick="setCookie();">
+    </p>
+
+    <p>
+    <input type="button" value="Show cookie" onClick="showCookie();">
+    </p>
+
+    <p>
+    <input type="submit" name="submitBtn" value="Submit Username">
+    </p>
+   </form>
+  </body>
+</html>

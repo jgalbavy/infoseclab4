@@ -1,0 +1,22 @@
+<html>
+ <head>
+  <h2>This page has malicious links</h2>
+ </head>
+ <body>
+<ol>
+<li>
+First look at this one. This link's text and the actual link behind it are different. You can notice that by hovering the mouse on the link and noting the actual referral location on the status bar.
+<br />
+<a href="#">EMC's RSA Security Breach May Cost Bank Customers $100 Million</a>
+ </li>
+
+ <li>
+ Now look at this one. Hovering and noting status window won't work on this one because form events write fake link to status window as well!! Hackers grow smarter with security education! <br />
+
+ <a href="./redirectpage.htm"onMouseOver="window.status='http://www.bloomberg.com/news/2011-06-08/emc-s-rsa-security-breach-may-cost-bank-customers-100-million.html';return true" onMouseOut="window.status='';return true">EMC's RSA Security Breach May Cost Bank Customers $100 Million</a>
+
+ </li>
+</ol>
+ </body>
+</html>
+
